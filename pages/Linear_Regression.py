@@ -26,7 +26,7 @@ plt.rcParams.update({
     "savefig.facecolor": "black",
     "savefig.edgecolor": "black"})
 
-df = pd.read_csv('datasets/Student_Performance.csv')
+df = pd.read_csv('./datasets/Student_Performance.csv')
 
 st.title("Linear Regression")
 

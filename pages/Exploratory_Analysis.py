@@ -5,7 +5,7 @@ import seaborn as sns
 
 st.set_page_config(page_title='Exploratory Analysis', layout="wide")
 
-df = pd.read_csv('datasets/Student_Performance.csv')
+df = pd.read_csv('./datasets/Student_Performance.csv')
 
 st.title('Exploratory Analysis')
 st.write('## Descriptive statistics of numeric values')
