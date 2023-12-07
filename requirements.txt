@@ -4,3 +4,4 @@ numpy~=1.21.5
 matplotlib~=3.5.1
 scikit-learn~=1.0.2
 seaborn~=0.12.2
+st-aggrid==0.3.4
