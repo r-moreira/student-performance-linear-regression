@@ -1,5 +1,4 @@
 import streamlit as st
-from st_aggrid import *
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -41,10 +40,10 @@ x_train, x_test, y_train, y_test = train_test_split(train, target, test_size = 0
 model = LinearRegression()
 model.fit(x_train,y_train)
 
-st.write("## Predictions")
+st.write("## Some Predictions")
 predictions = np.round(model.predict(x_test), decimals = 1)
 df_result = pd.DataFrame({"Actual Performance" : y_test, "Predicted Performance" : predictions})
-AgGrid(df_result, fit_columns_on_grid_load=True, height=300)
+st.table(df_result.head(20))
 
 st.write("## Linear Regression Distribution")
 plt.scatter(y_test, predictions)
@@ -80,3 +79,5 @@ Score refers to accuracy for a classification model, it ranges from 0 to 1 as we
 
 > In summary, based on these metrics, your model seems to have reasonably good performance as the metrics indicate relatively low average errors.
 """)
+
+#%%
